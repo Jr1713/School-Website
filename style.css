@@ -1,0 +1,269 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2F855A;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 25px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1562072542-1a0f9b51d720?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  color: #2F855A; /* Green text */
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: textPulse 3s infinite;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: rgba(255,255,255,0.85);
+  color: #2F855A;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #FFD700;
+  transform: scale(1.05);
+}
+
+/* Text animation */
+@keyframes textPulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+}
+
+section:nth-child(even) {
+  background: #F7FAFC;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2F855A;
+}
+
+/* About Section */
+#about p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2F855A; /* Green text */
+}
+
+/* Courses */
+.course-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px 20px;
+  width: 300px;
+  margin: 15px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #2F855A;
+}
+
+/* Events */
+.events-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.events-list li {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #CBD5E0;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  background: #2F855A;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background: #38A169;
+  transform: scale(1.05);
+}
+
+#formMessage {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #2F855A;
+}
+
+/* Footer */
+footer {
+  background: #1A202C;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.95rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content .close:hover {
+  color: #2F855A;
+}
+
+#enrollBtn {
+  padding: 12px 25px;
+  background: #2F855A;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#enrollBtn:hover {
+  background: #38A169;
+  transform: scale(1.05);
+}
